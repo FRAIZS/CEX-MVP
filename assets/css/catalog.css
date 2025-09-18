@@ -1,0 +1,185 @@
+/* Catalog Page Specific Styles */
+
+/* Categories Container */
+.container-fluid {
+    max-width: 393px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.row {
+    margin: 0;
+}
+
+.col-6 {
+    padding: 5px;
+}
+
+.category-card {
+    background-color: #E5E5E3;
+    border: none !important;
+    border-radius: 16px !important;
+    height: 134px;
+    cursor: pointer;
+    margin: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card .card-body {
+    background-color: #E5E5E3;
+}
+
+.category-card .card-body {
+    padding: 5px !important;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.72px;
+}
+
+.category-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.category-card:active {
+    transform: translateY(0);
+}
+
+.category-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    position: relative;
+    justify-content: space-between;
+    flex: 1;
+    flex-grow: 1;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 120px;
+    background-color: #E5E5E3;
+    left: -5px;
+    border-radius: 48px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23878787"/><text x="50" y="50" text-anchor="middle" dy=".3em" fill="%23FFFFFF" font-family="Arial" font-size="10">Category</text></svg>');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.category-text {
+    position: absolute;
+    bottom: 3px;
+    left: 10px;
+    right: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 1.083em;
+    text-align: center;
+    color: black;
+}
+
+/* Special layout for single wide card */
+.category-card.wide {
+    flex: 2;
+}
+
+.category-card.wide .image-placeholder {
+    height: 120px;
+}
+
+/* Bootstrap card overrides */
+.card {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 393px) {
+    .container-fluid {
+        max-width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* Animation for category cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.category-card {
+    animation: fadeInUp 0.3s ease-out;
+}
+
+.category-card:nth-child(1) { animation-delay: 0.1s; }
+.category-card:nth-child(2) { animation-delay: 0.2s; }
+.category-card:nth-child(3) { animation-delay: 0.3s; }
+.category-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Hover effects */
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 139, 45, 0.1), rgba(255, 139, 45, 0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 16px;
+}
+
+.category-card:hover::before {
+    opacity: 1;
+}
+
+/* Focus states for accessibility */
+.category-card:focus {
+    outline: 2px solid #E5E5E3;
+    outline-offset: 2px;
+}
+
+/* Loading state */
+.category-card.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.category-card.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #E5E5E3;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

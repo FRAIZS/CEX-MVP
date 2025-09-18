@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЦЕХ - Фильтры</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Base styles -->
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/filters.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Red+Rose:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <img src="../assets/images/logo.png" alt="logo" class="logo">
+        <a href="menu.html" class="menu-icon">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </a>
+    </header>
+
+    <!-- Page Title -->
+    <div class="container-fluid">
+        <h1 class="page-title">Фильтры</h1>
+    </div>
+
+    <!-- Price Section -->
+    <div class="container-fluid">
+        <h2 class="section-title">Цена, ₽</h2>
+        
+        <div class="row g-2">
+            <div class="col-6">
+                <div class="price-input-container">
+                    <input type="text" placeholder="От ... ₽" class="price-input">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="price-input-container">
+                    <input type="text" placeholder="До ... ₽" class="price-input">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="container-fluid">
+        <div class="divider"></div>
+    </div>
+
+    <!-- Sorting Section -->
+    <div class="container-fluid">
+        <h2 class="section-title">Сортировка</h2>
+        
+        <div class="sorting-options">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="sorting" id="default" value="default" checked>
+                <label class="form-check-label" for="default">
+                    По умолчанию
+                </label>
+            </div>
+            
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="sorting" id="date" value="date">
+                <label class="form-check-label" for="date">
+                    По дате
+                </label>
+            </div>
+            
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="sorting" id="cheaper" value="cheaper">
+                <label class="form-check-label" for="cheaper">
+                    Дешевле
+                </label>
+            </div>
+            
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="sorting" id="expensive" value="expensive">
+                <label class="form-check-label" for="expensive">
+                    Дороже
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Indicator -->
+    <div class="home-indicator">
+        <div class="indicator-bar"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+.main-text {
+    color: var(--Color, rgba(255, 255, 255, 1));
+
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 430;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: center;
+    padding-bottom: 13px;
+}
+
+.second-text {
+
+
+    color: var(--Color, rgba(255, 255, 255, 1));
+
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 430;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.card {
+    border-radius: 18px;
+    background: rgba(135, 135, 135, 1);
+    height: 200px;
+    margin-bottom: 14px;
+}
+
+img {
+    /* ImagePlaceholder */
+    width: 174.5px;
+    height: 180px;
+}
