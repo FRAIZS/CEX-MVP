@@ -18,7 +18,7 @@ project/
 │   │   ├── menu.css        # Стили меню
 │   │   ├── product.css     # Стили страницы товара
 │   │   ├── profile.css     # Стили профиля
-│   │   ├── reg-qr-face.css # Стили регистрации через QR/Face ID
+│   │   ├── reg-qr-face.css # Стили регистрации юр лица
 │   │   ├── sign-up.css     # Стили регистрации
 │   │   └── styles.css      # Основные стили
 │   └── images/             # Изображения и иконки
@@ -30,7 +30,7 @@ project/
 │   ├── login.html         # Страница входа
 │   ├── menu.html          # Страница меню
 │   ├── profile_fiz.html   # Профиль физического лица
-│   ├── reg-qr-face.html   # Регистрация через QR/Face ID
+│   ├── reg-qr-face.html   # Регистрация юр лица
 │   └── sign-up.html       # Страница регистрации
 └── templates/             # Шаблоны
     └── base.html          # Базовый HTML шаблон
